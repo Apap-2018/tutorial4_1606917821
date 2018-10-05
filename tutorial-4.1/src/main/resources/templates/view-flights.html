@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thmeleaf.org">
+	<head>
+		<title>Detail Flights</title>
+	</head>
+	
+	<body>
+			<table style="width:100%" border=1>
+				<tr>
+					<th>Flight Number</th>
+					<th>Origin</th>
+					<th>Destination</th>
+					<th>Time</th>
+					<th>Pilot</th>
+					
+				</tr>
+				<tr th:each="flight : ${flightList}">
+					<th th:text="${flight.flightNumber}"></th>
+					<th th:text="${flight.origin}"></th>
+					<th th:text="${flight.destination}"></th>
+					<th th:text="${flight.time}"></th>
+					<th th:text="${pilot.name}"></th>
+				</tr>
+			</table>
+	</body>
+</html>
